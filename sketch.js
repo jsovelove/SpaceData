@@ -1,4 +1,3 @@
-//camera controls class borrowed from https://codepen.io/amir-s/pen/jzqZdG?editors=0010
 
 let astroData;
 
@@ -75,6 +74,8 @@ function draw() {
     fill("#B7B7BC")
     textSize(70)
     text( 'There are currently \n' + astroNum + ' humans in space', -600, h2)
+    textSize(20)
+    text('This data was sourced from the people in space API \nand whoisinspace.com', -600, h2 + 150)
 
     translate(width/2, height/2);
     textSize(10);
@@ -130,6 +131,7 @@ window.mousePressed = e => Controls.move(controls).mousePressed(e)
 window.mouseDragged = e => Controls.move(controls).mouseDragged(e);
 window.mouseReleased = e => Controls.move(controls).mouseReleased(e)
 
+//camera controls class borrowed from https://codepen.io/amir-s/pen/jzqZdG?editors=0010
 
 class Controls {
   static move(controls) {
